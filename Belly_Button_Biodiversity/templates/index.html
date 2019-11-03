@@ -35,8 +35,71 @@
       <div class="col-md-5">
         <div id="pie"></div>
       </div>
-      <div class="col-md-5">
+
+      <div class="col-md-3">
         <div id="gauge">
+      <div align="center" style="width: 600px;">
+        <svg id="stacker1" width="100" height="300" style="font-family: Helvetica; font-weight: bold;" onclick="stacker1.update((Math.random()*100));"></svg>
+        <svg id="stacker2" width="200" height="300" style="font-family: Helvetica; font-weight: bold;" onclick="stacker2.update((Math.random()*100));"></svg>
+        <svg id="stacker3" width="150" height="300" style="font-family: Helvetica; font-weight: bold;" onclick="stacker3.update((Math.random()*100));"></svg>
+        <svg id="stacker4" width="100" height="300" style="font-family: Helvetica; font-weight: bold;" onclick="stacker4.update((Math.random()*1200));"></svg><br/>
+        <svg id="stacker5" width="560" height="100" style="font-family: Helvetica; font-weight: bold;" onclick="stacker5.update((Math.random()*100));"></svg><br/>
+        <svg id="stacker6" width="560" height="50" style="font-family: Helvetica; font-weight: bold;" onclick="stacker6.update((Math.random()*750));"></svg>
+      </div>
+
+      <script language="JavaScript">
+          var stacker1 = loadBarStacker("stacker1", "Fuel", 100);
+          var settings2 = barStackerDefaultSettings();
+          settings2.barThickness = 6;
+          settings2.valueAnimateTime = 2000;
+          settings2.textPx = 15;
+          settings2.valuePostfix = " Liters";
+          settings2.maxValue = 40;
+          settings2.color = "#2B1600";
+          settings2.cornerRoundingX = 70;
+          settings2.cornerRoundingY = 50;
+          var stacker2 = loadBarStacker("stacker2", "Coffee Remaining", 20, settings2);
+          var settings3 = barStackerDefaultSettings();
+          settings3.textLeftTop = false;
+          settings3.barBoxPadding = 3;
+          settings3.barPadding = 0;
+          settings3.valueAnimateTime = 350;
+          settings3.cornerRoundingX = 5;
+          settings3.cornerRoundingY = 30;
+          var stacker3 = loadBarStacker("stacker3", "Queue Length", 56, settings3);
+          var settings4 = barStackerDefaultSettings();
+          settings4.barThickness = 1;
+          settings4.barBoxPadding = 12;
+          settings4.barPadding = 1;
+          settings4.textPx = 30;
+          settings4.maxValue = 1500;
+          settings4.color = "#0066FF";
+          settings4.cornerRoundingX = 5;
+          settings4.cornerRoundingY = 5;
+          var stacker4 = loadBarStacker("stacker4", "Minerals",650, settings4);
+          var settings5 = barStackerDefaultSettings();
+          settings5.vertical = false;
+          settings5.valuePrefix = "$";
+          settings5.color = "#337733";
+          var stacker5 = loadBarStacker("stacker5", "Balance", 45, settings5);
+          var settings6 = barStackerDefaultSettings();
+          settings6.vertical = false;
+          settings6.textLeftTop = false;
+          settings6.textPx = 16;
+          settings6.valuePostfix = "gb";
+          settings6.maxValue = 750;
+          settings6.barThickness = 2;
+          settings6.barPadding = 3;
+          settings6.barBoxPadding = 12;
+          settings6.cornerRoundingX = 8;
+          settings6.cornerRoundingY = 20;
+          var stacker6 = loadBarStacker("stacker6", "Storage Capacity Available", 435, settings6);
+      </script>
+      </div>
+      </div>
+
+      <div class="col-md-2">
+        <div id="art">
             <style>
                 img {
                   display: block;
